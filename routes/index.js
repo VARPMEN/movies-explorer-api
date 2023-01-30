@@ -10,15 +10,15 @@ const { UNFIND_ERROR_MESSAGE } = require('../utils/constans');
 router.post('/signin', loginValidation, loginUser);
 router.post('/signup', createUserValidation, createUser);
 
-router.use('/*', () => {
-  throw new UnfindError(UNFIND_ERROR_MESSAGE);
-});
-
 router.use(auth);
 
 router.use(userRoute);
 router.use(movieRoute);
 
 router.post('/signout', signOutUser);
+
+router.use('/*', () => {
+  throw new UnfindError(UNFIND_ERROR_MESSAGE);
+});
 
 module.exports = router;
