@@ -1,5 +1,5 @@
-const { NODE_ENV, JWT_SECRET } = process.env;
 const jwt = require('jsonwebtoken');
+const JWT_CHECK = require('../utils/config');
 const InvalidTokenError = require('../errors/InvalidTokenError');
 const { INVALID_TOKEN_ERROR_MESSAGE } = require('../utils/constans');
 
@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
   try {
     payload = jwt.verify(
       token,
-      NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+      JWT_CHECK,
     );
   } catch (err) {
     throw new InvalidTokenError(INVALID_TOKEN_ERROR_MESSAGE);

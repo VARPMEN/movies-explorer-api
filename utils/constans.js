@@ -1,6 +1,3 @@
-const { PORT = 3000 } = process.env;
-const DATABASE_URL = 'mongodb://localhost:27017/bitfilmsdb';
-
 const VALIDATION_ERROR = 400;
 const VALIDATION_ERROR_MESSAGE = 'Введены некорректные данные.';
 
@@ -20,8 +17,6 @@ const SERVER_ERROR = 500;
 const SERVER_ERROR_MESSAGE = 'Ошибка сервера.';
 
 module.exports = {
-  PORT,
-  DATABASE_URL,
   VALIDATION_ERROR,
   VALIDATION_ERROR_MESSAGE,
   INVALID_TOKEN_ERROR,
