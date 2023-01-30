@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_CHECK = require('../utils/config');
+const { JWT_CHECK } = require('../utils/config');
 const InvalidTokenError = require('../errors/InvalidTokenError');
 const { INVALID_TOKEN_ERROR_MESSAGE } = require('../utils/constans');
 
