@@ -8,7 +8,7 @@ const helmet = require('helmet');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { DATABASE_URL, PORT, allowedCors } = require('./utils/config');
-const routes = require('./routes/index');
+const routes = require('./routes');
 const { errorHandler } = require('./middlewares/errorHandler');
 const limiter = require('./middlewares/limiter');
 

@@ -1,6 +1,5 @@
 const { celebrate, Joi } = require('celebrate');
 
-// eslint-disable-next-line no-useless-escape
 const linkRegExp = /^(https?\:\/\/)(www)?[\w\.\_\~\:\?\#\[\]\@\!\$\&\'\(\)\*\+\,\;\=]*\#?/;
 
 const createUserValidation = celebrate({
@@ -35,7 +34,7 @@ const createMovieValidation = celebrate({
   body: Joi.object().keys({
     country: Joi.string().required(),
     director: Joi.string().required(),
-    duration: Joi.string().required(),
+    duration: Joi.number().required(),
     year: Joi.string().required(),
     description: Joi.string().required(),
     image: Joi.string().required().pattern(linkRegExp),
@@ -43,7 +42,7 @@ const createMovieValidation = celebrate({
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
     thumbnail: Joi.string().required().pattern(linkRegExp),
-    movieId: Joi.string().required(),
+    movieId: Joi.number().required(),
   }),
 });
 

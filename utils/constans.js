@@ -2,7 +2,7 @@ const VALIDATION_ERROR = 400;
 const VALIDATION_ERROR_MESSAGE = 'Введены некорректные данные.';
 
 const INVALID_TOKEN_ERROR = 401;
-const INVALID_TOKEN_ERROR_MESSAGE = 'Передан неверный логин или пароль.';
+const INVALID_TOKEN_ERROR_MESSAGE = 'Ошибка авторизации.';
 
 const FORBIDDEN_ERROR = 403;
 const FORBIDDEN_ERROR_MESSAGE = 'Недостаточно прав!';
@@ -15,6 +15,10 @@ const NONUNIQUE_ERROR_MESSAGE = 'Email уже используется.';
 
 const SERVER_ERROR = 500;
 const SERVER_ERROR_MESSAGE = 'Ошибка сервера.';
+
+const TOKEN_CREATE_MESSAGE = { message: 'Токен создан.' };
+
+const ESCAPE_MESSAGE = { message: 'Пользователь вышел.' };
 
 module.exports = {
   VALIDATION_ERROR,
@@ -29,4 +33,6 @@ module.exports = {
   NONUNIQUE_ERROR_MESSAGE,
   SERVER_ERROR,
   SERVER_ERROR_MESSAGE,
+  TOKEN_CREATE_MESSAGE,
+  ESCAPE_MESSAGE,
 };
