@@ -10,7 +10,7 @@ const DATABASE_URL = (NODE_ENV === 'production' ? DB_URL : 'mongodb://localhost:
 const allowedCors = [
   'http://diploma.prokhorov.nomoredomainsclub.ru',
   'https://diploma.prokhorov.nomoredomainsclub.ru',
-  'localhost:3000',
+  'http://localhost:3000',
 ];
 
 module.exports = {
