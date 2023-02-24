@@ -7,14 +7,14 @@ const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { DATABASE_URL, PORT, allowedCors } = require('./utils/config');
+const { DATABASE_URL, PORT, corsOptions } = require('./utils/config');
 const routes = require('./routes');
 const { errorHandler } = require('./middlewares/errorHandler');
 const limiter = require('./middlewares/limiter');
 
 const app = express();
 
-app.use(cors(allowedCors));
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

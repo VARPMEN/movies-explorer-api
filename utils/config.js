@@ -13,8 +13,13 @@ const allowedCors = [
   'http://localhost:3000',
 ];
 
+const corsOptions = {
+  origin: allowedCors,
+  credentials: true,
+};
+
 module.exports = {
-  allowedCors,
+  corsOptions,
   PORT,
   DATABASE_URL,
   JWT_CHECK,
